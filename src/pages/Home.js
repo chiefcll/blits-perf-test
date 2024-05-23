@@ -37,9 +37,10 @@ export default Blits.Application({
   },
   hooks: {
     init() {
-      setTimeout(() => {
+      setInterval(() => {
         const _blocks = []
-        for (let step = 0; step < 100; step++) {
+        // If you want to test tear down and full recreate you need to remove the key prop
+        for (let step = 0; step < 1000; step++) {
           _blocks.push({
             key: step,
             width: random(50, 100),
